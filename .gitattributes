@@ -5,3 +5,6 @@ src/* linguist-language=HTML
 # Ignore vendor or generated library folders so they don't mess up language stats
 vendor/* linguist-vendored
 dist/* linguist-vendored
+
+*.html linguist-detectable=true
+*.css linguist-detectable=true
