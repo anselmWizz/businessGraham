@@ -1,5 +1,6 @@
 # Force specific files/folders to be treated as HTML
-*.php linguist-language=HTML
+*.html linguist-language=HTML
+*.css linguist-language=CSS
 src/* linguist-language=HTML
 
 # Ignore vendor or generated library folders so they don't mess up language stats
