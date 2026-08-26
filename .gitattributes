@@ -1,11 +1,6 @@
-# Force specific files/folders to be treated as HTML
-*.html linguist-language=HTML
-*.css linguist-language=CSS
-src/* linguist-language=HTML
+# Force all .html files across all folders to be detected
+**/*.html linguist-detectable=true
+**/*.html linguist-language=HTML
 
-# Ignore vendor or generated library folders so they don't mess up language stats
-vendor/* linguist-vendored
-dist/* linguist-vendored
-
-*.html linguist-detectable=true
-*.css linguist-detectable=true
+# Ignore or override any PHP files inside subfolders so they don't show up
+**/*.php linguist-vendored
