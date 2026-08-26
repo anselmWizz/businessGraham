@@ -3,32 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BGB</title>
+  <title>Simple One Page Website</title>
   <link rel="stylesheet" href="pssthoy.css" />
 </head>
 <body>
-  <header>
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="log.jpg" alt="Logo">
-      <span>Belmonte’s Graham Bar</span>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="log.jpg" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-
-    
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-
-    
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-  </header>
-
+  </nav>
 
  
   <section id="home" class="shome">
@@ -59,7 +51,7 @@
 </section>
 
 
-<section id="products" class="sproduct">
+<section id="product" class="sproduct">
   <h1 class="product-title">PRODUCTS</h1>
   <div class="flex-container">
 
@@ -68,7 +60,7 @@
       <details>
         <summary><h3><i>MANGO</i></h3></summary>
         <p>Made with layers of fresh mangoes, graham crackers, and creamy milk a sweet, tropical classic!</p>
-        <p><b>Price:</b> ₱20 each</p>
+        <p><b>Price:</b> ₱20</p>
       </details>
     </div>
 
@@ -77,7 +69,7 @@
       <details>
         <summary><h3><i>COOKIES N' CREAM</i></h3></summary>
         <p>A creamy blend of crushed cookies and milk layered perfectly with graham and cream smooth, sweet, and satisfying.</p>
-        <p><b>Price:</b> ₱20 each</p>
+        <p><b>Price:</b> ₱20</p>
       </details>
     </div>
 
@@ -86,7 +78,7 @@
       <details>
         <summary><h3><i>MILO</i></h3></summary>
         <p>Combines rich chocolate malt flavor with graham and cream the ultimate nostalgic treat!</p>
-        <p><b>Price:</b> ₱20 each</p>
+        <p><b>Price:</b> ₱20</p>
       </details>
     </div>
 
@@ -95,7 +87,7 @@
       <details>
         <summary><h3><i>UBE CHEESE</i></h3></summary>
         <p>A Filipino favorite creamy ube and cheese flavors layered with graham and milk for a colorful delight.</p>
-        <p><b>Price:</b> ₱20 each</p>
+        <p><b>Price:</b> ₱20</p>
       </details>
     </div>
 
@@ -122,22 +114,16 @@
   </div>
 </section>
 
- <footer class="footer">
-  <p>© 2025 All Rights Reserved | James Iverson Ruiz & Ruzzel Belmonte</p>
-</footer>
 
-
-<script>
+ <script>
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links a");
-  const toggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-links");
 
   window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100; 
+      const sectionTop = section.offsetTop - 80; // adjust for navbar height
       const sectionHeight = section.clientHeight;
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
         current = section.getAttribute("id");
@@ -151,27 +137,7 @@
       }
     });
   });
-
-  
-  toggle.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      // highlight clicked link
-      navLinks.forEach((l) => l.classList.remove("active"));
-      link.classList.add("active");
-
-      
-      navMenu.classList.remove("show");
-    });
-  });
 </script>
-
-
-
-
 
 
 </body>
