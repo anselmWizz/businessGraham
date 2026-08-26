@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#sevices">Service</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <section id="home"><h2>Home</h2>
+    <p class="pop">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eos quasi eum deserunt doloremque praesentium quam consequuntur hic ipsam quia! Deleniti rem voluptates aut in eos. Iste architecto quam itaque!</p></section>
+    <section id="services">
+        <div class="container left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste recusandae doloremque amet? Suscipit sed, quas reiciendis nostrum, deleniti illum commodi est error impedit veritatis quaerat eligendi modi! A, exercitationem commodi.</div>
+        <div class="container right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat facilis perspiciatis iure impedit perferendis distinctio aliquid maxime vero soluta pariatur non voluptatem quod veniam, nostrum ex, enim repudiandae. Necessitatibus, nobis!</div>
+    </section>
+    <script>
+        const navLinks=document.querySelectorAll(".navlinks a ");
+        navLinks.forEach(link=>{
+            link.addEventListener("click",()=>{
+                const targetId=link.getAttribute("href");
+                const targetSection=document.querySelector(targetId);
+                if(targetSection){
+                    const aniElements=targetSection.querySelectorAll(
+                        "pop, .olept, .right"
+                    );
+                aniElements.forEach(el=>{
+                    el.style.animation="none";
+                    void el.offsetwidth;
+                    el.style.animation="";
+                });
+                };
+            });
+
+        });
+    </script>
+</body>
+</html>
